@@ -50,7 +50,13 @@ header.h1 {
     font-size: 20px;
 }
 
-.github-profile-summary-cards {
+/*.projects {
+    display: grid;
+    grid-template-rows: 0;
+    grid-template-columns: 0
+}*/
+
+.projects iframe.github-profile-summary-cards {
     border: 0;
     height: 100%;
     width: 500px;
