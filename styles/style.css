@@ -50,16 +50,22 @@ header.h1 {
     font-size: 20px;
 }
 
-/*.projects {
+.projects {
     display: grid;
-    grid-template-rows: 0;
-    grid-template-columns: 0
-}*/
+    grid-template-rows: 100px 100px; /*height*/
+    grid-template-columns: fit-content(500px) fit-content(500px) 1fr; /*width*/
+    grid-template-areas: 
+        "project1 project2 project3"
+        "project4 project5 project6";
+}
 
 .projects iframe.github-profile-summary-cards {
+    grid-area: project4;
     border: 0;
-    height: 100%;
-    width: 500px;
+    height: 110px;
+    width: 600px;
+    margin-left: -100px;
+    margin-top: -20px;
 }
 
 hr {
@@ -67,4 +73,14 @@ hr {
     background-color: #525252;
     border: 0;
     height: 1px;
+}
+
+.proj-1-cc-glass {
+    display: flex;
+    background-image: ;
+}
+
+.proj-1-cc-glass img {
+    width: 200px;
+    height: 200px;
 }
