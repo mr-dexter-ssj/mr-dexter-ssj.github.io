@@ -52,14 +52,20 @@ header.h1 {
 
 .projects {
     display: grid;
-    grid-template-rows: 100px 100px; /*height*/
+    grid-template-rows: 100px 100px 100px; /*height*/
     grid-template-columns: fit-content(500px) fit-content(500px) 1fr; /*width*/
     grid-template-areas: 
         "project1 project2 project3"
         "project4 project5 project6";
 }
 
-.projects iframe.github-profile-summary-cards {
+.projects h1 {
+    grid-area: project1;
+    grid-column: 1 / span 3;
+    justify-self: center;
+}
+
+.projects .github-profile-summary-cards {
     grid-area: project4;
     border: 0;
     height: 110px;
@@ -75,12 +81,46 @@ hr {
     height: 1px;
 }
 
+
+
 .proj-1-cc-glass {
-    display: flex;
-    background-image: ;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../uploads/cc-glass-bg.png');
+    background-size: cover;
+    text-align: justify;
 }
 
 .proj-1-cc-glass img {
     width: 200px;
     height: 200px;
+    grid-row: 1 / span 2;
+}
+
+.proj-1-cc-glass p.desc {
+    margin-top: 20px;
+    align-self: center;
+}
+
+.proj-1-cc-glass div.ver{
+    display: flex;
+    font-weight: bold;
+    align-self: center;
+}
+
+.proj-1-cc-glass p:not(.ver, .desc){
+    padding-top: -3px;
+    padding-bottom: -3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #a6a2a2;
+    margin-right: 5px;
+    margin-left: 3px;
+    border: 1px solid #444444; 
+    background-color: #333232;
+    border-radius: 50px;
+    height: fit-content;
+    align-self: center;
+    font-weight: lighter;
 }
