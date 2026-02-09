@@ -85,7 +85,7 @@ hr {
 
 .proj-1-cc-glass {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 200px 2fr;
     grid-template-rows: 2fr 1fr;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../uploads/cc-glass-bg.png');
     background-size: cover;
@@ -101,6 +101,7 @@ hr {
 .proj-1-cc-glass p.desc {
     margin-top: 20px;
     align-self: center;
+    margin-right: 20px;
 }
 
 .proj-1-cc-glass div.ver{
